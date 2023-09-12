@@ -155,7 +155,11 @@ fun EditScreen(
                testViewModel.changeEducation(newEducationText)
                testViewModel.changeSkills(newSkillsText)
                Toast.makeText(context, "Changes made successfully", Toast.LENGTH_SHORT).show()
-               navController.navigate(Screen.Home.route)
+               navController.navigate(Screen.Home.route) {
+                   popUpTo(Screen.Home.route) {
+                       inclusive = true
+                   }
+               }
            }
        ) {
            Text(
