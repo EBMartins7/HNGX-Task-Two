@@ -154,7 +154,8 @@ fun EditScreen(
                testViewModel.changeBio(newBioText)
                testViewModel.changeEducation(newEducationText)
                testViewModel.changeSkills(newSkillsText)
-               Toast.makeText(context, "Changed made successfully", Toast.LENGTH_SHORT).show()
+               Toast.makeText(context, "Changes made successfully", Toast.LENGTH_SHORT).show()
+               navController.navigate(Screen.Home.route)
            }
        ) {
            Text(
